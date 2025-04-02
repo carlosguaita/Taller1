@@ -5,14 +5,24 @@ public class Materia {
     private String nombre;
     private int creditos;
     private String codigo;
-    private Estudiante estudiante;
+    private Estudiante[] estudiante = new Estudiante[5];
 
-    public Estudiante getEstudiante() {
-        return estudiante;
+
+    public Materia() {
     }
 
-    public void setEstudiante(Estudiante estudiante) {
-        this.estudiante = estudiante;
+    public Materia(String nombre, int creditos, String codigo) {
+        this.nombre = nombre;
+        this.creditos = creditos;
+        this.codigo = codigo;
+    }
+
+    public Estudiante getEstudiante(int i) {
+        return estudiante[i];
+    }
+
+    public void setEstudiante(Estudiante estudiante, int i) {
+        this.estudiante[i] = estudiante;
     }
 
     public String getNombre() {

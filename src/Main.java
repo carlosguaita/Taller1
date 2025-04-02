@@ -22,10 +22,8 @@ public class Main {
         System.out.print("Nota3: ");
         double nota3 = sc.nextDouble();
 
-        Estudiante est1 = new Estudiante();
-        est1.setNombre(nombre);
-        est1.setEdad(edad);
-        est1.setNotas(nota1, nota2, nota3);
+        Estudiante est1 = new Estudiante(nombre,edad,nota1,nota2,nota3);
+
 
         System.out.println("Ingrese los datos de la materia:");
         System.out.print("Nombre de la materia: ");
@@ -35,20 +33,7 @@ public class Main {
         System.out.print("Codigo: ");
         String codigo = sc.next();
 
-        Materia mt1 = new Materia();
-        mt1.setNombre(nombreMateria);
-        mt1.setCreditos(creditos);
-        mt1.setCodigo(codigo);
-        mt1.setEstudiante(est1);
-
-        System.out.println("Nombre del estudiante: " + mt1.getEstudiante().getNombre());
-        System.out.println("Edad del estudiante: " + mt1.getEstudiante().getEdad());
-        double[] notas = mt1.getEstudiante().getNotas();
-        System.out.println("Notas del estudiante: ");
-        for (int i = 0; i < notas.length; i++) {
-            System.out.println("Nota " + (i + 1) + ": " + notas[i]);
-        }
-
+        Materia mt1 = new Materia(nombre,creditos,codigo);
 
 
 
